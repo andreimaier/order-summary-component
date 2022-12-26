@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+body {
+    background: no-repeat top/100% url(./order-summary-component-main/images/pattern-background-desktop.svg);
+    background-color: hsl(225, 100%, 94%) 
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    flex-direction: column;
+    width: 28rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.container img {
+    max-width:100%;
+max-height:100%;
+    border-radius: 10px 10px 0 0;
+}
+.bottom {
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    flex-direction: column;
+    padding: 2.5rem 3rem 0 3rem;
+}
+.bottom h1 {
+    text-align: center;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    
+}
+.text {
+    line-height: 1.7rem;
+    padding: 1.3rem;
+    text-align: center;
+    color: hsl(224, 23%, 55%)
+}
+.plan {
+    width: 100%;
+    padding: 1.4rem;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-between;
+    background-color: hsl(225, 100%, 98%);
+}
+.plan img {
+    width: 3.1rem;
+    aspect-ratio: 1/1;
+}
+.left {
+    gap: 1rem
+}
+.plan a {
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+    transition: 0.4s ease-in-out;
+}
+.plan a:hover {
+    text-decoration: none;
+}
+.price {  
+    flex-direction: column;
+      
+}
+.price p:first-child {
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+.price p:last-child {
+    color: hsl(224, 23%, 55%);
+    word-wrap: break-word;
+}
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;  
+    margin-block: 10px;
+    width: 100%;
+}
+button:first-of-type{
+    background-color: hsl(245, 75%, 52%);
+    color:white;
+    font-weight: 700;
+    margin-top: 1.8rem;
+    box-shadow: 0px 10px 20px 0px hsl(224, 23%, 55%);
+    transition: 0.4s ease-in-out;
+}
+button:first-of-type:hover {
+    background-color: hsla(245, 75%, 52%, 0.632);
+}
+button:last-of-type {
+   background-color: transparent;
+   color: hsl(224, 23%, 55%);
+   font-weight: 900;
+   transition: 0.4s ease-in-out;
+}
+button:last-of-type:hover {
+    color:black
+}
+
+@media screen and (max-width:420px) {
+    body {
+        background: no-repeat top/100% url(./order-summary-component-main/images/pattern-background-mobile.svg);
+        background-color: hsl(225, 100%, 94%) 
+    }
+    .container {
+        width: 90vw;
+        min-height: 90vh;
+    }
+
+    .bottom {
+        padding:1.9rem 1.9rem 0rem 1.9rem;
+    }
+    .text {
+        padding: 1.2rem 1.2rem 1.6rem 1.2rem;
+    }
+    .plan {
+        padding: 1.1rem 1.1rem 1.5rem 1.1rem;
+    }
+    button {
+        margin-block: 0.3rem;
+        font-size: 1rem;
+        padding: 1.3rem;
+        width: 100%;
+    }
+    button:first-of-type {
+        margin-top: 1.2rem;
+    }
+}
